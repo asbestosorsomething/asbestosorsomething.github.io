@@ -14,6 +14,40 @@
       color: #ffffff;
     }
 
+    /* Navbar Styles */
+    nav {
+      background-color: #313338;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #5865f2;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    /* Main Container */
     .container {
       max-width: 500px;
       margin: 50px auto;
@@ -133,6 +167,16 @@
   </style>
 </head>
 <body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Solo</div>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="value.html">value checker</a>
+    </div>
+  </nav>
+
   <div class="container">
     <label for="age">How old is your account:</label>
     <select id="age" name="age" size="7">
