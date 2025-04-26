@@ -206,6 +206,9 @@
 
     <button onclick="calculateValue()">Calculate Value</button>
     <h2 id="totalValue" style="margin-top: 20px;"></h2>
+
+    <!-- Tweet Button -->
+    <button id="tweetButton" style="display: none;" onclick="tweetValue()">Tweet Account Value</button>
   </div>
 
   <!-- Footer -->
@@ -221,6 +224,8 @@
   </footer>
 
   <script>
+    let accountValue = 0;
+
     function calculateValue() {
       let total = 0;
 
@@ -242,8 +247,15 @@
       }
 
       // Output result
+      accountValue = total;
       document.getElementById("totalValue").textContent = `Estimated Value: $${total.toLocaleString()}`;
-      console.log("Total account value:", total);
+      document.getElementById("tweetButton").style.display = 'block'; // Show the tweet button
+    }
+
+    function tweetValue() {
+      const tweetText = `My Discord account is worth $${accountValue.toLocaleString()}! Check out yours at : https://asbestosorsomething.github.io/`;
+      const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
+      window.open(tweetUrl, "_blank");
     }
   </script>
 </body>
