@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>solo - fake nitro</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #2b2d31;
+      color: #ffffff;
+    }
+
+    /* Navbar Styles */
+    nav {
+      background-color: #313338;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #5865f2;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: #313338;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .links-container {
+      margin-bottom: 20px;
+    }
+
+    .link-item {
+      background-color: #444;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .link-item a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .button {
+      padding: 10px 20px;
+      background-color: #5865f2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #4752c4;
+    }
+
+    h1 {
+      color: #5865f2;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Solo</div>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="value.html">value checker</a>
+      <a href="fakenitro.html">fake nitro</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Fake nitro urls</h1>
+    <p>Troll your friends with fake nitro links.</p>
+
+    <div class="links-container">
+      <div class="link-item">
+        <a href="https://discord.gift/QCZnbtEKy4JHSpmpfnWx2Z4f" target="_blank">hhttps://discord.gift/QCZnbtEKy4JHSpmpfnWx2Z4f</a>
+        <button class="button" onclick="copyLink('https://discord.gift/QCZnbtEKy4JHSpmpfnWx2Z4f')">Copy</button>
+      </div>
+      <div class="link-item">
+        <a href="https://discord.gift/eC969wN9wHfnfSSxDAShM3U4" target="_blank">https://discord.gift/eC969wN9wHfnfSSxDAShM3U4</a>
+        <button class="button" onclick="copyLink('https://discord.gift/eC969wN9wHfnfSSxDAShM3U4')">Copy</button>
+      </div>
+      <div class="link-item">
+        <a href="https://discord.gift/dM76Tj7NSfqN64kVpn9JBJdE" target="_blank">https://discord.gift/dM76Tj7NSfqN64kVpn9JBJdE</a>
+        <button class="button" onclick="copyLink('https://discord.gift/dM76Tj7NSfqN64kVpn9JBJdE')">Copy</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="background-color: #313338; padding: 15px; text-align: center; font-size: 0.9rem; color: #b5bac1;">
+    <p>&copy; 2025 Solo. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function copyLink(link) {
+      const tempInput = document.createElement('input');
+      tempInput.value = link;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      alert('Link copied to clipboard: ' + link);
+    }
+  </script>
+
+</body>
+</html>
