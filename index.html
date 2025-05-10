@@ -28,15 +28,52 @@
         transform: translateY(100vh);
       }
     }
+
+    #mute-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid white;
+      color: white;
+      border-radius: 5px;
+      padding: 8px 12px;
+      cursor: pointer;
+      z-index: 1000;
+      font-size: 0.9em;
+      transition: background 0.3s;
+    }
+
+    #mute-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
   </style>
 </head>
 <body>
 
   <!-- Background Music -->
-  <audio autoplay loop hidden>
+  <audio id="bg-music" autoplay loop>
     <source src="https://cdn.pixabay.com/audio/2025/04/26/audio_5281b3676b.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+
+  <!-- Mute Button -->
+  <button id="mute-btn">Mute</button>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    const muteBtn = document.getElementById('mute-btn');
+
+    muteBtn.addEventListener('click', () => {
+      if (music.muted) {
+        music.muted = false;
+        muteBtn.textContent = 'Mute';
+      } else {
+        music.muted = true;
+        muteBtn.textContent = 'Unmute';
+      }
+    });
+  </script>
 
   <!-- Snowflakes Script -->
   <script>
